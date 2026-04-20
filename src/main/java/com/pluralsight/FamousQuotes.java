@@ -26,10 +26,17 @@ public class FamousQuotes {
                     int number = input.nextInt() - 1;
                     input.nextLine();
                     System.out.println(quotes[number]);
+                    System.out.println("Get another quote? Y/N");
+                    String answer = input.nextLine();
+                    if (answer.equalsIgnoreCase("N")) {
+                        System.out.println("Thanks for using our quotes.");
+                        process = false;
+                    }
 
                 } catch (Exception e) {
                     System.out.println("Something went wrong. Please try again.");
                 }
+
             }
         }
 }
